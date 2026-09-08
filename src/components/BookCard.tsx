@@ -39,12 +39,6 @@ export default function BookCard({ book }: { book: Book }) {
         <p className="mt-3 flex-1 text-sm text-muted line-clamp-3">
           {book.review}
         </p>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
-          Ver reseña
-          <span aria-hidden className="transition-transform group-hover:translate-x-1">
-            →
-          </span>
-        </span>
       </div>
     </Link>
   );
