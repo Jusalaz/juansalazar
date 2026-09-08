@@ -27,45 +27,33 @@ export default function Header() {
           className="flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <Logo className="h-9 w-9" />
-          <span>
-            <span className="block font-display text-xl text-ink">Juan Salazar</span>
-            <span className="block font-mono text-[0.65rem] uppercase tracking-[0.15em] text-coral-dark">
-              Emprendimiento · Finanzas · IA
-            </span>
-          </span>
+          <Logo className="h-8 w-8" />
+          <span className="font-display text-lg tracking-tight text-ink">Juan Salazar</span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1 font-mono text-xs">
-          {navLinks.map((link, index) => {
+        <nav className="hidden lg:flex items-center gap-10">
+          {navLinks.map((link) => {
             const active =
               link.href === "/"
                 ? pathname === "/"
                 : pathname.startsWith(link.href);
             return (
-              <span key={link.href} className="flex items-center gap-1">
-                {index > 0 ? <span className="text-border">/</span> : null}
-                <Link
-                  href={link.href}
-                  className={`group relative px-2 py-1 uppercase tracking-[0.05em] transition-colors ${
-                    active ? "text-ink" : "text-muted hover:text-ink"
-                  }`}
-                >
-                  {link.label}
-                  <span
-                    className={`absolute -bottom-0.5 left-2 right-2 h-[2px] origin-left rounded-full bg-coral transition-transform duration-300 ${
-                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  />
-                </Link>
-              </span>
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
+                  active ? "text-ink" : "text-muted hover:text-ink"
+                }`}
+              >
+                {link.label}
+              </Link>
             );
           })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <ButtonLink href="/contacto" variant="primary">
-            Contacto
+          <ButtonLink href="/contacto" variant="primary" className="uppercase tracking-[0.1em]">
+            Hablemos
           </ButtonLink>
         </div>
 
@@ -110,9 +98,9 @@ export default function Header() {
             <Link
               href="/contacto"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-inverse px-6 py-3 text-center text-sm font-medium text-white"
+              className="mt-2 rounded-full bg-inverse px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.1em] text-white"
             >
-              Contacto
+              Hablemos
             </Link>
           </Container>
         </div>
