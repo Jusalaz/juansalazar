@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/libros", label: "Libros" },
   { href: "/recursos", label: "Recursos" },
-  { href: "/sobre-mi", label: "Sobre mí" },
 ];
 
 export default function Header() {

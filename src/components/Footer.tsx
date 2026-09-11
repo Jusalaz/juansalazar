@@ -10,12 +10,6 @@ const columns = [
       { href: "/blog", label: "Blog" },
       { href: "/libros", label: "Libros" },
       { href: "/recursos", label: "Recursos" },
-    ],
-  },
-  {
-    title: "Más",
-    links: [
-      { href: "/sobre-mi", label: "Sobre mí" },
       { href: "/contacto", label: "Contacto" },
     ],
   },
@@ -27,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="border-t-2 border-ink bg-inverse text-white">
       <Container className="py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5">
               <DiamondMark className="h-3.5 w-3.5 border-coral" />
