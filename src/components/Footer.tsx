@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
-import Logo from "@/components/Logo";
+import DiamondMark from "@/components/DiamondMark";
 import SocialLinks from "@/components/SocialLinks";
 
 const columns = [
@@ -29,9 +29,11 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3">
-              <Logo className="h-8 w-8" />
-              <p className="font-display text-xl">Juan Salazar</p>
+            <div className="flex items-center gap-2.5">
+              <DiamondMark className="h-3.5 w-3.5 border-coral" />
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em]">
+                Juan Salazar
+              </p>
             </div>
             <p className="mt-4 max-w-sm text-sm text-white/60">
               Contenido sobre emprendimiento, finanzas personales e
@@ -50,7 +52,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
+                      className="font-mono text-xs uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>

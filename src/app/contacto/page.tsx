@@ -17,6 +17,7 @@ export default function ContactoPage() {
         <Reveal>
           <SectionHeading
             eyebrow="Contacto"
+            index="01"
             title="Escríbeme"
             description="¿Tienes una pregunta sobre finanzas personales, una idea para un artículo o quieres sugerir un libro? Cuéntame."
           />

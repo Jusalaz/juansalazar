@@ -23,6 +23,7 @@ export default async function LibrosPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Libros"
+              index="01"
               title="Lo que voy leyendo"
               description="Reseñas honestas de los libros que más me han ayudado a pensar mejor sobre negocio, plata e IA."
             />

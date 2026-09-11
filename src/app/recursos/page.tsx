@@ -41,7 +41,7 @@ export default async function RecursosPage() {
       <section className="py-20">
         <Container>
           <Reveal>
-            <SectionHeading eyebrow="Herramientas" title="Herramientas de IA que uso" />
+            <SectionHeading eyebrow="Herramientas" index="01" title="Herramientas de IA que uso" />
           </Reveal>
           <RevealGroup className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {tools.map((tool) => (
@@ -58,6 +58,7 @@ export default async function RecursosPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Prompts"
+              index="02"
               title="Prompts listos para usar"
               description="Haz clic en cualquier tarjeta para copiar el prompt completo al portapapeles."
             />
@@ -81,7 +82,7 @@ export default async function RecursosPage() {
       <section className="py-20">
         <Container>
           <Reveal>
-            <SectionHeading eyebrow="Descargas" title="Plantillas, documentos y cursos" />
+            <SectionHeading eyebrow="Descargas" index="03" title="Plantillas, documentos y cursos" />
           </Reveal>
           {resources.length > 0 ? (
             <RevealGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

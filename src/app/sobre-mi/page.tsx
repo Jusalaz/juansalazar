@@ -79,7 +79,7 @@ export default function SobreMiPage() {
       <section className="py-20">
         <Container>
           <Reveal>
-            <SectionHeading eyebrow="Trayectoria" title="De dónde viene lo que comparto" />
+            <SectionHeading eyebrow="Trayectoria" index="01" title="De dónde viene lo que comparto" />
           </Reveal>
           <div className="mt-12 space-y-8">
             {experience.map((item, index) => (
@@ -102,7 +102,7 @@ export default function SobreMiPage() {
       <section className="border-t-2 border-ink bg-surface-alt py-20">
         <Container>
           <Reveal>
-            <SectionHeading eyebrow="Cómo escribo" title="La voz detrás del contenido" />
+            <SectionHeading eyebrow="Cómo escribo" index="02" title="La voz detrás del contenido" />
           </Reveal>
           <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-3">
             {voice.map((item) => (

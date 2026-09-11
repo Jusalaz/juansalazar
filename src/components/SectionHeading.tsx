@@ -1,10 +1,12 @@
 export default function SectionHeading({
   eyebrow,
+  index,
   title,
   description,
   align = "left",
 }: {
   eyebrow?: string;
+  index?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
@@ -14,7 +16,8 @@ export default function SectionHeading({
   return (
     <div className={`max-w-2xl ${alignClass}`}>
       {eyebrow ? (
-        <p className="font-mono text-xs uppercase tracking-[0.15em] text-accent mb-3">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-coral-dark mb-3">
+          {index ? `${index} / ` : ""}
           {eyebrow}
         </p>
       ) : null}

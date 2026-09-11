@@ -32,6 +32,7 @@ export default async function BlogPage({ searchParams }: Props) {
           <Reveal>
             <SectionHeading
               eyebrow="Blog"
+              index="01"
               title="Negocio, plata e IA"
               description="Artículos cortos y directos sobre construir un negocio, tomar mejores decisiones con tu plata, y usar la IA para resolver problemas reales."
             />
@@ -44,7 +45,7 @@ export default async function BlogPage({ searchParams }: Props) {
           <Reveal className="flex flex-wrap gap-3">
             <Link
               href="/blog"
-              className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+              className={`rounded-full border-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] transition-colors ${
                 !activeCategory
                   ? "border-ink bg-inverse text-white"
                   : "border-ink/15 text-muted hover:border-ink hover:text-ink"
@@ -56,7 +57,7 @@ export default async function BlogPage({ searchParams }: Props) {
               <Link
                 key={cat.value}
                 href={`/blog?categoria=${cat.value}`}
-                className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+                className={`rounded-full border-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] transition-colors ${
                   activeCategory === cat.value
                     ? "border-ink bg-inverse text-white"
                     : "border-ink/15 text-muted hover:border-ink hover:text-ink"

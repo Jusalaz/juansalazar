@@ -20,7 +20,7 @@ const variants: Record<NonNullable<BaseProps["variant"]>, string> = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide hover:scale-[1.03] active:scale-[0.98] transition-transform duration-200";
+  "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] font-semibold hover:scale-[1.03] active:scale-[0.98] transition-transform duration-200";
 
 export function ButtonLink({
   href,
