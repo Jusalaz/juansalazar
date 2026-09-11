@@ -24,6 +24,8 @@
   --color-amber-dark: #a8501b;
   --color-coral: #ff6666;
   --color-coral-dark: #c9284f;
+  --color-lime: #c7e84e;
+  --color-lime-dark: #5c6e18;
 }
 
 @theme inline {
@@ -44,6 +46,8 @@
   --color-amber-dark: var(--color-amber-dark);
   --color-coral: var(--color-coral);
   --color-coral-dark: var(--color-coral-dark);
+  --color-lime: var(--color-lime);
+  --color-lime-dark: var(--color-lime-dark);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-plex-mono);
   --font-display: var(--font-bricolage);

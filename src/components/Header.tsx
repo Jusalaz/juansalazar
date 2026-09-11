@@ -4,8 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Container from "@/components/Container";
-import { ButtonLink } from "@/components/Button";
-import Logo from "@/components/Logo";
+import DiamondMark from "@/components/DiamondMark";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -20,18 +19,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-ink bg-background/90 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 bg-inverse text-white">
+      <Container className="flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          <Logo className="h-8 w-8" />
-          <span className="font-display text-lg tracking-tight text-ink">Juan Salazar</span>
+          <DiamondMark className="h-3 w-3 border-coral" />
+          <span className="font-mono text-xs font-semibold uppercase tracking-[0.15em]">
+            Juan Salazar
+          </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
             const active =
               link.href === "/"
@@ -41,8 +42,8 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
-                  active ? "text-ink" : "text-muted hover:text-ink"
+                className={`font-mono text-[0.7rem] uppercase tracking-[0.15em] transition-colors ${
+                  active ? "text-white" : "text-white/50 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -51,23 +52,26 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <ButtonLink href="/contacto" variant="primary" className="uppercase tracking-[0.1em]">
+        <div className="hidden lg:block">
+          <Link
+            href="/contacto"
+            className="inline-flex items-center rounded-full border border-white/30 px-5 py-2 font-mono text-[0.7rem] uppercase tracking-[0.15em] transition-colors hover:border-white"
+          >
             Hablemos
-          </ButtonLink>
+          </Link>
         </div>
 
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-ink"
+          className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-white"
           aria-label="Abrir menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">Menú</span>
           <svg
-            width="24"
-            height="24"
+            width="22"
+            height="22"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -83,14 +87,14 @@ export default function Header() {
       </Container>
 
       {open ? (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-white/10 bg-inverse">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-base font-medium text-ink hover:bg-surface-alt"
+                className="rounded-md px-2 py-3 font-mono text-xs uppercase tracking-[0.1em] text-white/80 hover:bg-white/5 hover:text-white"
               >
                 {link.label}
               </Link>
@@ -98,7 +102,7 @@ export default function Header() {
             <Link
               href="/contacto"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-inverse px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.1em] text-white"
+              className="mt-2 rounded-full border border-white/30 px-6 py-3 text-center font-mono text-xs uppercase tracking-[0.1em] text-white"
             >
               Hablemos
             </Link>

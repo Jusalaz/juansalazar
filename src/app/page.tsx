@@ -4,6 +4,8 @@ import SectionHeading from "@/components/SectionHeading";
 import { ButtonLink } from "@/components/Button";
 import BlogCard from "@/components/BlogCard";
 import BookCard from "@/components/BookCard";
+import Marquee from "@/components/Marquee";
+import DiamondMark from "@/components/DiamondMark";
 import Reveal from "@/components/Reveal";
 import { RevealGroup, RevealItem } from "@/components/RevealGroup";
 import { getPublishedPosts } from "@/lib/data/posts";
@@ -16,21 +18,18 @@ const pillars = [
     title: "Emprendimiento",
     description: "Cómo se construye y se sostiene un negocio, desde adentro.",
     href: "/blog?categoria=emprendimiento",
-    bg: "bg-berry",
     text: "text-berry",
   },
   {
     title: "Finanzas personales",
     description: "Decisiones de plata explicadas con números reales, no fórmulas mágicas.",
     href: "/blog?categoria=finanzas",
-    bg: "bg-amber",
     text: "text-amber-dark",
   },
   {
     title: "Inteligencia artificial",
     description: "Herramientas de IA aplicadas, para gente que no programa.",
     href: "/blog?categoria=ia",
-    bg: "bg-coral",
     text: "text-coral-dark",
   },
 ];
@@ -47,54 +46,113 @@ export default async function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="py-32 text-center lg:py-44">
-        <Container>
+      <section className="relative overflow-hidden bg-inverse text-white">
+        <Container className="relative pt-16 pb-20 lg:pt-24 lg:pb-28">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute right-6 top-6 hidden sm:block"
+          >
+            <DiamondMark className="h-16 w-16 border-coral/50" />
+          </div>
+
           <Reveal>
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-coral-dark">
-              Emprendimiento — Finanzas — IA
+            <p className="max-w-sm font-mono text-xs uppercase tracking-[0.3em] text-white/50">
+              Juan Salazar — un punto de vista para gente en movimiento
             </p>
           </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mx-auto mt-8 max-w-5xl font-display text-5xl uppercase leading-[0.95] tracking-tight text-ink text-balance sm:text-7xl lg:text-8xl">
-              Claridad para tomar
+
+          <Reveal delay={0.08}>
+            <h1 className="mt-8 max-w-3xl font-display text-6xl uppercase leading-[0.92] tracking-tight text-balance sm:text-7xl lg:text-8xl">
+              Claridad
               <br />
-              <span className="text-berry">mejores</span> decisiones
+              <span className="text-coral">para</span>
+              <br />
+              decisiones
+              <br />
+              <span className="text-lime">reales</span>
+              <span className="text-coral">.</span>
             </h1>
           </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-10 max-w-lg text-lg text-muted text-balance">
-              Negocio, plata e inteligencia artificial explicados sin humo,
-              con la misma disciplina con la que se lee un estado financiero.
-            </p>
-          </Reveal>
-          <Reveal delay={0.28}>
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <ButtonLink href="/blog" className="uppercase tracking-[0.1em]">
-                Leer el blog
-              </ButtonLink>
-              <ButtonLink href="/recursos" variant="secondary" className="uppercase tracking-[0.1em]">
-                Descargar recursos
-              </ButtonLink>
+
+          <Reveal delay={0.22}>
+            <div className="mt-16 flex flex-col gap-6 border-t border-white/15 pt-8 sm:flex-row sm:items-end sm:justify-between">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-8 bg-coral" aria-hidden />
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">
+                  Desliza
+                </span>
+              </div>
+              <p className="max-w-sm text-sm text-white/70">
+                <span
+                  className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-lime align-middle"
+                  aria-hidden
+                />
+                Negocio, plata e inteligencia artificial explicados sin humo,
+                con la misma disciplina con la que se lee un estado financiero.
+              </p>
             </div>
           </Reveal>
+        </Container>
+
+        <Reveal delay={0.3}>
+          <div className="border-t border-white/10 bg-lime py-3 text-inverse">
+            <Marquee
+              items={["EMPRENDIMIENTO", "FINANZAS", "IA", "SIN HUMO", "DECISIONES CLARAS"]}
+            />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Premisa */}
+      <section className="py-24 lg:py-32">
+        <Container>
+          <Reveal>
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-coral-dark">
+              01 / Mi premisa
+            </p>
+          </Reveal>
+          <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <Reveal delay={0.06}>
+              <h2 className="font-display text-4xl leading-[1.05] text-ink sm:text-5xl">
+                Menos teoría.
+                <br />
+                <span className="text-coral">Más decisiones reales.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.14}>
+              <div className="flex flex-col gap-6">
+                <p className="text-lg text-muted">
+                  Comparto cómo se ven de verdad las decisiones de negocio,
+                  plata e IA — no la versión pulida para LinkedIn.
+                </p>
+                <div className="border-l-2 border-coral pl-5">
+                  <p className="text-sm text-muted">
+                    No es consultoría genérica: es la bitácora de alguien
+                    construyendo una startup mientras aprende a manejar su
+                    propia plata.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
       {/* Pilares de contenido */}
-      <section className="border-y-2 border-ink py-20">
+      <section className="border-y-2 border-ink">
         <Container>
           <RevealGroup className="grid divide-y-2 divide-ink/10 sm:grid-cols-3 sm:divide-x-2 sm:divide-y-0">
-            {pillars.map((pillar) => (
+            {pillars.map((pillar, index) => (
               <RevealItem key={pillar.title}>
                 <Link
                   href={pillar.href}
-                  className="group flex h-full flex-col items-center gap-3 px-6 py-10 text-center transition-colors hover:bg-surface-alt"
+                  className="group flex h-full flex-col gap-3 px-2 py-12 transition-colors hover:bg-surface-alt"
                 >
-                  <span className={`h-2 w-2 rounded-full ${pillar.bg}`} aria-hidden />
-                  <h3 className="font-display text-xl uppercase tracking-tight text-ink">
-                    {pillar.title}
-                  </h3>
-                  <p className="max-w-[22ch] text-sm text-muted">{pillar.description}</p>
+                  <span className={`font-mono text-xs ${pillar.text}`}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display text-xl text-ink">{pillar.title}</h3>
+                  <p className="max-w-[26ch] text-sm text-muted">{pillar.description}</p>
                   <span className={`mt-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] ${pillar.text}`}>
                     Explorar
                     <span aria-hidden className="transition-transform group-hover:translate-x-1">
@@ -109,7 +167,7 @@ export default async function Home() {
       </section>
 
       {/* Blog preview */}
-      <section className="border-t-2 border-ink bg-surface-alt py-28">
+      <section className="bg-surface-alt py-28">
         <Container>
           <Reveal>
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
