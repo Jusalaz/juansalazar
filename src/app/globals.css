@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff8ef;
-  --foreground: #2a151c;
+  --background: #f6f3ec;
+  --foreground: #171b1a;
 
-  --color-ink: #2a151c;
-  --color-ink-soft: #7a5a63;
-  --color-muted: #7a5a63;
+  --color-ink: #171b1a;
+  --color-ink-soft: #5c625f;
+  --color-muted: #5c625f;
   --color-surface: #ffffff;
-  --color-surface-alt: #ffefd9;
-  --color-border: #f4dcc2;
+  --color-surface-alt: #ede9e1;
+  --color-border: #d7d1c7;
 
   /* Siempre oscuro, sin importar el tema: para botones/bloques sólidos con texto blanco */
-  --color-inverse: #2a151c;
+  --color-inverse: #171b1a;
 
-  /* Marca "Maple": berry = primario / emprendimiento, ámbar = finanzas, coral = IA + acento general */
-  --color-accent: #c9284f;
-  --color-accent-dark: #9e1f3d;
-  --color-accent-soft: #fbe4ea;
+  /* Brand kit oficial: Signal Orange, Soft Cement, Night Ink, Electric Lime */
+  --color-accent: #f06449;
+  --color-accent-dark: #c94a32;
+  --color-accent-soft: #fce3dc;
 
-  --color-berry: #c9284f;
+  --color-berry: #c94a32;
   --color-amber: #ffb072;
   --color-amber-dark: #a8501b;
-  --color-coral: #ff6666;
-  --color-coral-dark: #c9284f;
-  --color-lime: #c7e84e;
-  --color-lime-dark: #5c6e18;
+  --color-coral: #f06449;
+  --color-coral-dark: #c94a32;
+  --color-lime: #c7f35e;
+  --color-lime-dark: #4f6b12;
 }
 
 @theme inline {
@@ -49,7 +49,7 @@
   --color-lime: var(--color-lime);
   --color-lime-dark: var(--color-lime-dark);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-plex-mono);
+  --font-mono: var(--font-space-mono);
   --font-display: var(--font-bricolage);
 }
 
