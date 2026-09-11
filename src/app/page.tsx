@@ -236,19 +236,19 @@ export default async function Home() {
       <section className="pb-28">
         <Container>
           <Reveal>
-            <div className="relative overflow-hidden rounded-2xl bg-berry px-8 py-16 text-center sm:px-16">
+            <div className="relative overflow-hidden rounded-2xl bg-inverse px-8 py-16 text-center sm:px-16">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-16 -left-16 h-56 w-56 rounded-full bg-coral/25 blur-3xl"
+                className="pointer-events-none absolute -top-16 -left-16 h-56 w-56 rounded-full bg-coral/20 blur-3xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-coral/20 blur-3xl"
+                className="pointer-events-none absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-lime/15 blur-3xl"
               />
               <h2 className="relative font-display text-4xl text-white text-balance sm:text-5xl">
                 Plantillas y recursos gratis
               </h2>
-              <p className="relative mx-auto mt-4 max-w-xl text-base text-white/80 text-balance">
+              <p className="relative mx-auto mt-4 max-w-xl text-base text-white/70 text-balance">
                 Excel para presupuesto, documentos y cursos cortos que puedes
                 descargar y empezar a usar hoy mismo.
               </p>
