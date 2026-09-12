@@ -62,15 +62,16 @@ export default async function Home() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="mt-8 max-w-4xl font-display text-7xl uppercase leading-[0.82] tracking-tight text-balance sm:text-8xl lg:text-9xl xl:text-[10rem]">
-              Claridad
-              <br />
-              <span className="text-coral">para</span>
-              <br />
-              decisiones
-              <br />
-              <span className="text-lime">reales</span>
-              <span className="text-coral">.</span>
+            <h1 className="mt-8 font-display uppercase leading-[0.82] tracking-tight">
+              <span className="block text-5xl sm:text-6xl lg:text-7xl">Claridad</span>
+              <span className="block pl-[0.4em] text-7xl text-coral sm:text-8xl lg:text-9xl">
+                para
+              </span>
+              <span className="block text-5xl sm:text-6xl lg:text-7xl">decisiones</span>
+              <span className="block text-8xl sm:text-9xl lg:text-[11rem]">
+                <span className="text-lime">reales</span>
+                <span className="text-coral">.</span>
+              </span>
             </h1>
           </Reveal>
 
@@ -113,10 +114,11 @@ export default async function Home() {
           </Reveal>
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal delay={0.06}>
-              <h2 className="font-display text-5xl leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-                Menos teoría.
-                <br />
-                <span className="text-coral">Más decisiones reales.</span>
+              <h2 className="font-display leading-[0.92] tracking-tight text-ink">
+                <span className="block text-3xl sm:text-4xl">Menos teoría.</span>
+                <span className="block text-6xl text-coral sm:text-7xl lg:text-8xl">
+                  Más decisiones reales.
+                </span>
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
@@ -146,14 +148,22 @@ export default async function Home() {
               <RevealItem key={pillar.title}>
                 <Link
                   href={pillar.href}
-                  className="group flex h-full flex-col gap-3 px-2 py-12 transition-colors hover:bg-surface-alt"
+                  className="group relative flex h-full flex-col gap-3 overflow-hidden px-6 py-12 transition-colors hover:bg-surface-alt"
                 >
-                  <span className={`font-mono text-xs ${pillar.text}`}>
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute -top-8 -right-2 select-none font-display text-[9rem] leading-none text-ink/[0.04] transition-colors group-hover:text-ink/[0.07]"
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-display text-xl text-ink">{pillar.title}</h3>
-                  <p className="max-w-[26ch] text-sm text-muted">{pillar.description}</p>
-                  <span className={`mt-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] ${pillar.text}`}>
+                  <span className={`relative font-mono text-xs ${pillar.text}`}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="relative font-display text-2xl leading-none text-ink">
+                    {pillar.title}
+                  </h3>
+                  <p className="relative max-w-[26ch] text-sm text-muted">{pillar.description}</p>
+                  <span className={`relative mt-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] ${pillar.text}`}>
                     Explorar
                     <span aria-hidden className="transition-transform group-hover:translate-x-1">
                       →
@@ -245,8 +255,9 @@ export default async function Home() {
                 aria-hidden
                 className="pointer-events-none absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-lime/15 blur-3xl"
               />
-              <h2 className="relative font-display text-5xl leading-[1] tracking-tight text-white text-balance sm:text-6xl">
-                Plantillas y recursos gratis
+              <h2 className="relative font-display leading-[0.95] tracking-tight text-white">
+                <span className="block text-4xl sm:text-5xl">Plantillas y recursos</span>
+                <span className="block text-6xl text-lime sm:text-7xl">gratis.</span>
               </h2>
               <p className="relative mx-auto mt-4 max-w-xl text-base text-white/70 text-balance">
                 Excel para presupuesto, documentos y cursos cortos que puedes
