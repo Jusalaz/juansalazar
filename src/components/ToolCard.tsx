@@ -12,7 +12,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
       <ToolIcon icon={tool.icon} />
       <div>
         <div className="flex items-center gap-2">
-          <h3 className="font-display text-base text-ink">{tool.name}</h3>
+          <h3 className="font-display text-lg text-ink">{tool.name}</h3>
           <span
             aria-hidden
             className="text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -62,7 +62,7 @@ export default async function Home() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="mt-8 max-w-3xl font-display text-6xl uppercase leading-[0.92] tracking-tight text-balance sm:text-7xl lg:text-8xl">
+            <h1 className="mt-8 max-w-4xl font-display text-7xl uppercase leading-[0.82] tracking-tight text-balance sm:text-8xl lg:text-9xl xl:text-[10rem]">
               Claridad
               <br />
               <span className="text-coral">para</span>
@@ -113,7 +113,7 @@ export default async function Home() {
           </Reveal>
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal delay={0.06}>
-              <h2 className="font-display text-4xl leading-[1.05] text-ink sm:text-5xl">
+              <h2 className="font-display text-5xl leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl">
                 Menos teoría.
                 <br />
                 <span className="text-coral">Más decisiones reales.</span>
@@ -245,7 +245,7 @@ export default async function Home() {
                 aria-hidden
                 className="pointer-events-none absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-lime/15 blur-3xl"
               />
-              <h2 className="relative font-display text-4xl text-white text-balance sm:text-5xl">
+              <h2 className="relative font-display text-5xl leading-[1] tracking-tight text-white text-balance sm:text-6xl">
                 Plantillas y recursos gratis
               </h2>
               <p className="relative mx-auto mt-4 max-w-xl text-base text-white/70 text-balance">

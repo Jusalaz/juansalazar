@@ -15,7 +15,7 @@ export default function PromptCard({ prompt }: { prompt: Prompt }) {
         className="group flex w-full flex-col rounded-2xl border-2 border-ink/10 bg-surface p-6 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-ink"
       >
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-display text-lg text-ink">{prompt.title}</h3>
+          <h3 className="font-display text-xl text-ink">{prompt.title}</h3>
           <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-surface-alt px-3 py-1 font-mono text-xs text-muted transition-colors group-hover:text-ink">
             Ver
             <span aria-hidden>↗</span>

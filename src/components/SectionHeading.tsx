@@ -21,7 +21,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-display text-4xl sm:text-5xl text-ink text-balance">
+      <h2 className="font-display text-5xl leading-[1] tracking-tight text-ink text-balance sm:text-6xl">
         {title}
       </h2>
       {description ? (

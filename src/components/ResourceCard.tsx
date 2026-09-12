@@ -14,7 +14,7 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
       <p className="font-mono text-xs uppercase tracking-[0.1em] text-coral-dark">
         {typeLabels[resource.type]}
       </p>
-      <h3 className="mt-3 font-display text-xl text-ink text-balance">
+      <h3 className="mt-3 font-display text-2xl leading-tight text-ink text-balance">
         {resource.title}
       </h3>
       <p className="mt-3 flex-1 text-sm text-muted">{resource.description}</p>

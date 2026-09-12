@@ -53,7 +53,7 @@ export default function PromptModal({
       >
         <div className="flex items-start justify-between gap-4 border-b-2 border-ink/10 p-6">
           <div>
-            <h3 id="prompt-modal-title" className="font-display text-xl text-ink">
+            <h3 id="prompt-modal-title" className="font-display text-2xl text-ink">
               {prompt.title}
             </h3>
             <p className="mt-1 text-sm text-muted">{prompt.description}</p>

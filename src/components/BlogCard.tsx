@@ -32,7 +32,7 @@ export default function BlogCard({ post }: { post: Post }) {
           </span>
           <span className="text-muted">{formatDate(post.created_at)}</span>
         </div>
-        <h3 className="mt-3 font-display text-xl text-ink text-balance">
+        <h3 className="mt-3 font-display text-2xl leading-tight text-ink text-balance">
           {post.title}
         </h3>
         <p className="mt-3 flex-1 text-sm text-muted">{post.excerpt}</p>

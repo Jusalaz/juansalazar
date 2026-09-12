@@ -32,7 +32,7 @@ export default function BookCard({ book }: { book: Book }) {
       )}
       <div className="flex flex-1 flex-col p-7">
         <Stars rating={book.rating} />
-        <h3 className="mt-3 font-display text-xl text-ink text-balance">
+        <h3 className="mt-3 font-display text-2xl leading-tight text-ink text-balance">
           {book.title}
         </h3>
         <p className="text-sm text-muted">{book.author}</p>
