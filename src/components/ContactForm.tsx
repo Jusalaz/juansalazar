@@ -52,7 +52,7 @@ export default function ContactForm() {
           required
           rows={5}
           className={inputClass}
-          placeholder="Cuéntame tu pregunta, idea o sugerencia"
+          placeholder="Cuéntame si quieres agendar una charla, una colaboración o tu pregunta"
         />
       </div>
 

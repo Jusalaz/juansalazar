@@ -7,7 +7,7 @@ import { socialLinks } from "@/lib/social";
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description: "Escríbeme, comparte una idea de contenido o cuéntame en qué puedo ayudarte.",
+  description: "Escríbeme si quieres agendar una charla, una colaboración o cuéntame en qué puedo ayudarte.",
 };
 
 export default function ContactoPage() {
@@ -19,7 +19,7 @@ export default function ContactoPage() {
             eyebrow="Contacto"
             index="01"
             title="Escríbeme"
-            description="¿Tienes una pregunta sobre finanzas personales, una idea para un artículo o quieres sugerir un libro? Cuéntame."
+            description="¿Quieres agendar una charla, invitarme a un espacio o proponer una colaboración? Escríbeme y coordinamos."
           />
 
           <div className="mt-10 space-y-6">
