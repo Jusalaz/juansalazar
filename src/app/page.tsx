@@ -114,10 +114,14 @@ export default async function Home() {
           </Reveal>
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal delay={0.06}>
-              <h2 className="font-display leading-[0.92] tracking-tight text-ink">
-                <span className="block text-3xl sm:text-4xl">Menos teoría.</span>
-                <span className="block text-6xl text-coral sm:text-7xl lg:text-8xl">
-                  Más decisiones reales.
+              <h2 className="font-display leading-[0.85] tracking-tight text-ink">
+                <span className="block text-2xl sm:text-3xl">Menos teoría. Más</span>
+                <span className="block text-7xl text-coral sm:text-8xl lg:text-9xl">
+                  decisiones
+                </span>
+                <span className="block text-6xl sm:text-7xl lg:text-8xl">
+                  <span className="text-lime">reales</span>
+                  <span className="text-coral">.</span>
                 </span>
               </h2>
             </Reveal>
