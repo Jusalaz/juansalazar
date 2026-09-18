@@ -26,6 +26,8 @@ export default function KuddosStory() {
       <section>
         <h2>Todo empezó en papel.</h2>
         <p>Éramos unos pelados de 18 años. Fuimos a fotocopiar como 20 hojas de estas y empezamos a pintar el flujo del usuario en la app: por dónde entraba, qué escogía, a dónde lo llevaba cada botón.</p>
+        <p>Imagínense lo que ven en las imágenes, pero repartido en 20 páginas sobre la mesa del comedor. La mesa llena de hojas y nosotros tratando de imaginarnos cómo se iba a sentir todo eso en un celular. Cada hoja era una pantalla; las flechas eran nuestra forma de pasar de una a otra.</p>
+        <p>Ahí, entre dibujos y botones de papel, íbamos armando el recorrido completo. La app todavía no existía en lo digital, pero nosotros ya la estábamos recorriendo sobre el comedor.</p>
         <p>Así, tal como se ve en las imágenes, empezó nuestra primera app. A punta de papel, dibujos y flechas.</p>
         <div className="grid gap-5 sm:grid-cols-2">
           <ArchiveImage src="/blog/kuddos/boceto-inicio.png" alt="Boceto a mano de la pantalla de inicio de Kuddos, con indicaciones para animar el logo" caption="Una de las primeras hojas: así imaginábamos el inicio de Kuddos." width={848} height={1200} />
@@ -36,27 +38,32 @@ export default function KuddosStory() {
       <section>
         <h2>Del papel al código.</h2>
         <p>Después tocó pasar todo eso a código. En ese entonces no teníamos una IA que nos ayudara a programar: todo el código tocaba hacerlo a mano. Ya se imaginarán el tiempo que tomó empezar a volver realidad lo que habíamos dibujado.</p>
+        <p>Los entregables, los ajustes, que esto todavía falta, que aquello hay que revisarlo… Lo que en una hoja resolvíamos con una flecha, en la app tenía que funcionar de verdad. Y para los que entienden del tema: preparar una app para Apple puede ser un dolor de cabeza. Nosotros también nos metimos en ese cuento.</p>
         <p>Y esas hojas se fueron convirtiendo en lo que ven aquí: las pantallas de nuestra app.</p>
         <ArchiveImage src="/blog/kuddos/app-materias.png" alt="Tres pantallas del diseño de Kuddos: materias, plan de estudio y tutoría" caption="Del papel a las pantallas: materias, planes de estudio y tutorías." />
         <ArchiveImage src="/blog/kuddos/iteracion-planes.png" alt="Comparación de dos diseños de los planes de estudio de Kuddos" caption="Seguíamos ajustando cómo se veían y se escogían los planes. La app todavía estaba en construcción." />
       </section>
 
       <section>
-        <h2>Los tutores y el Café de la Lerner.</h2>
+        <h2>Los tutores y el Café de la Lerner de la 93.</h2>
         <p>Mientras tanto, hacíamos entrevistas en el Café de la Lerner de la 93. Ahí conocíamos a quienes iban a ser nuestros tutores. Entrevistamos como a 10 para empezar a conectar estudiantes con tutores.</p>
+        <p>Claro, ya habíamos hecho merch y tales. Ya teníamos hasta los sacos de Kuddos. Entre las entrevistas, las pantallas y todo lo que estábamos preparando, le íbamos dando forma a eso que queríamos montar.</p>
         <p>Y aquí hay una primera pista de dónde la cagamos: para empezar a hacer esas conexiones no necesitábamos algo tan complejo. La app todavía tenía que encajar mejor con lo que la gente necesitaba, y nosotros ya estábamos metidos en construirla.</p>
       </section>
 
       <section>
         <h2>Y luego llegóooo el COVID.</h2>
-        <p>Nos cambió el juego. La gente ahora buscaba todo digital, nuevos espacios y nuevas experiencias. Fue cuando dijimos: «Demos clases de música».</p>
-        <p>Yo tenía una organeta de los años 2000 y andaba por todo Bogotá llevándola de un lado a otro. De dibujar pantallas a mover una organeta por la ciudad: eso también fue Kuddos.</p>
+        <p>Nos cambió el juego. La gente ahora buscaba todo digital, nuevos espacios y nuevas experiencias. Fue cuando dijimos: «Demos clases de música y hagámoslas por Zoom».</p>
+        <p>Pa ese entonces, para nosotros no era tan fácil ni tan obvio como parece hoy. Pensándolo ahora, se sentía como el comienzo de una vida mucho más digitalizada. Pero bueno, ese no es el cuento de esta historia.</p>
+        <p>Yo tenía una organeta de los años 2000 y andaba por todo Bogotá llevándola de un lado a otro. La dejaba en la portería y, cuando la recogíamos, tocaba limpiarla con alcohol a lo que daba. En ese momento sentíamos que había que desinfectar absolutamente todo por ese tal COVID.</p>
+        <p>Y claro: ¡el que tiene tienda, que la atienda! Tocaba estar conectado a las sesiones de Zoom, estar pilas de que las clases sí se dieran y así poder cobrar. Entre mover la organeta y estar pendientes de las sesiones, también íbamos aprendiendo lo que implicaba prestar el servicio.</p>
       </section>
 
       <section>
-        <h2>Tres años después.</h2>
-        <p>Kuddos duró como tres años. Perooo la aplicación nunca se lanzó. Una cosa fue todo lo que hicimos con las clases y los tutores, y otra la app que estábamos construyendo.</p>
-        <p>Decidimos cerrar Kuddos porque no nos generaba ingresos.</p>
+        <h2>Un par de años después.</h2>
+        <p>Kuddos duró como tres años. Perooo la aplicación nuuunca se lanzó. Una cosa fue todo lo que hicimos con las clases y los tutores, y otra la app que estábamos construyendo.</p>
+        <p>Decidimos cerrar KUDDOS. Después de las hojas sobre el comedor, el código, las entrevistas y la organeta por Bogotá, hasta ahí llegó ese primer emprendimiento.</p>
+        <p>Aún tengo los sacos que hicimos.</p>
       </section>
 
       <section>
