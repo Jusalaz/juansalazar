@@ -1,67 +1,19 @@
 import Link from "next/link";
 import Container from "@/components/Container";
-import DiamondMark from "@/components/DiamondMark";
 import SocialLinks from "@/components/SocialLinks";
 
-const columns = [
-  {
-    title: "Contenido",
-    links: [
-      { href: "/blog", label: "Blog" },
-      { href: "/libros", label: "Libros" },
-      { href: "/recursos", label: "Recursos" },
-      { href: "/contacto", label: "Contacto" },
-    ],
-  },
-];
-
 export default function Footer() {
-  const year = new Date().getFullYear();
-
-  return (
-    <footer className="border-t-2 border-ink bg-inverse text-white">
-      <Container className="py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <DiamondMark className="h-3.5 w-3.5 border-coral" />
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em]">
-                Juan Salazar
-              </p>
-            </div>
-            <p className="mt-4 max-w-sm text-sm text-white/60">
-              Contenido sobre emprendimiento, finanzas personales e
-              inteligencia artificial: artículos, libros y recursos gratis.
-            </p>
-            <SocialLinks className="mt-6" />
-          </div>
-
-          {columns.map((col) => (
-            <div key={col.title}>
-              <p className="font-mono text-xs uppercase tracking-[0.1em] text-coral">
-                {col.title}
-              </p>
-              <ul className="mt-4 space-y-3">
-                {col.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="font-mono text-xs uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/15 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Juan Salazar. Todos los derechos reservados.</p>
-          <p>contacto@juansalazar.com</p>
-        </div>
-      </Container>
-    </footer>
-  );
+  return <footer className="bg-inverse text-white">
+    <Container className="pt-14 pb-7 sm:pt-20">
+      <div className="flex flex-col items-start justify-between gap-8 border-b border-white/15 pb-12 sm:flex-row sm:items-end">
+        <div><p className="eyebrow text-white/50">La siguiente idea empieza conversando</p><p className="mt-5 font-display text-5xl leading-none tracking-tight sm:text-7xl">Hagamos que<br /><span className="text-lime">pase algo.</span></p></div>
+        <Link href="/contacto" aria-label="Hablemos, ir a contacto" className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-coral text-4xl text-inverse transition-transform hover:-rotate-12">↗</Link>
+      </div>
+      <div className="grid gap-8 py-10 sm:grid-cols-2">
+        <div><Link href="/" className="font-display text-2xl font-semibold tracking-tight">Juan Salazar<span className="text-coral">.</span></Link><p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55">Negocio, plata e IA. Un punto de vista para gente en movimiento.</p><SocialLinks className="mt-5" /></div>
+        <nav aria-label="Navegación del pie de página" className="flex flex-wrap items-start gap-x-7 gap-y-4 sm:justify-end">{[{href:"/blog",label:"Blog"},{href:"/libros",label:"Libros"},{href:"/recursos",label:"Recursos"},{href:"/contacto",label:"Contacto"}].map(link => <Link key={link.href} href={link.href} className="py-2 text-sm text-white/70 hover:text-lime">{link.label}</Link>)}</nav>
+      </div>
+      <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row sm:justify-between"><p>© {new Date().getFullYear()} Juan Salazar</p><a href="mailto:contacto@juansalazar.com" className="hover:text-white">contacto@juansalazar.com ↗</a></div>
+    </Container>
+  </footer>;
 }

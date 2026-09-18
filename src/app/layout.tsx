@@ -38,8 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${bricolage.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-ink font-sans">
+        <a href="#contenido" className="skip-link">Saltar al contenido</a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="contenido" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

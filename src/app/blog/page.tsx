@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
-import SectionHeading from "@/components/SectionHeading";
+import PageIntro from "@/components/PageIntro";
+import EmptyState from "@/components/EmptyState";
 import BlogCard from "@/components/BlogCard";
 import Reveal from "@/components/Reveal";
 import { RevealGroup, RevealItem } from "@/components/RevealGroup";
@@ -27,24 +28,14 @@ export default async function BlogPage({ searchParams }: Props) {
 
   return (
     <>
-      <section className="border-b-2 border-ink bg-surface-alt py-20">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Blog"
-              index="01"
-              title="Negocio, plata e IA"
-              description="Artículos cortos y directos sobre construir un negocio, tomar mejores decisiones con tu plata, y usar la IA para resolver problemas reales."
-            />
-          </Reveal>
-        </Container>
-      </section>
+      <PageIntro eyebrow="01 / El blog" title="Ideas para pensar." accent="Y para hacer." description="Negocio, plata e inteligencia artificial, sin vueltas. Lo que aprendo, lo que pruebo y lo que vale la pena compartir." />
 
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <Container>
           <Reveal className="flex flex-wrap gap-3">
             <Link
               href="/blog"
+              aria-current={!activeCategory ? "page" : undefined}
               className={`rounded-full border-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] transition-colors ${
                 !activeCategory
                   ? "border-ink bg-inverse text-white"
@@ -57,6 +48,7 @@ export default async function BlogPage({ searchParams }: Props) {
               <Link
                 key={cat.value}
                 href={`/blog?categoria=${cat.value}`}
+                aria-current={activeCategory === cat.value ? "page" : undefined}
                 className={`rounded-full border-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] transition-colors ${
                   activeCategory === cat.value
                     ? "border-ink bg-inverse text-white"
@@ -77,9 +69,7 @@ export default async function BlogPage({ searchParams }: Props) {
               ))}
             </RevealGroup>
           ) : (
-            <p className="mt-10 text-center text-muted">
-              Todavía no hay artículos en esta categoría.
-            </p>
+            <div className="mt-10"><EmptyState title="Las próximas ideas están en camino." description="Mientras llega un nuevo artículo, puedes poner manos a la obra con las herramientas y plantillas gratuitas." /></div>
           )}
         </Container>
       </section>

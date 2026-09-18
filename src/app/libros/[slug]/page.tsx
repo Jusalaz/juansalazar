@@ -74,9 +74,9 @@ export default async function BookDetailPage({ params }: Props) {
             </div>
           </div>
 
-          <div className="mt-12 space-y-6">
+          <div className="reading-body mt-12 space-y-6">
             {paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-base leading-relaxed text-ink-soft">
+              <p key={index} className="text-lg leading-[1.85] text-ink-soft">
                 {paragraph}
               </p>
             ))}

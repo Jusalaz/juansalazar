@@ -7,7 +7,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
       href={tool.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex gap-4 rounded-2xl border-2 border-ink/10 bg-surface p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-ink"
+      className="content-card group flex gap-4 rounded-2xl border border-ink/10 bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink/30"
     >
       <ToolIcon icon={tool.icon} />
       <div>

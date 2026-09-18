@@ -12,7 +12,7 @@ export default function PromptCard({ prompt }: { prompt: Prompt }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group flex w-full flex-col rounded-2xl border-2 border-ink/10 bg-surface p-6 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-ink"
+        className="content-card group flex w-full flex-col rounded-2xl border border-ink/10 bg-surface p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-ink/30"
       >
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-display text-xl text-ink">{prompt.title}</h3>

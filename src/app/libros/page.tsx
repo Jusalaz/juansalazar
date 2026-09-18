@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
-import SectionHeading from "@/components/SectionHeading";
+import PageIntro from "@/components/PageIntro";
+import EmptyState from "@/components/EmptyState";
 import BookCard from "@/components/BookCard";
-import Reveal from "@/components/Reveal";
 import { RevealGroup, RevealItem } from "@/components/RevealGroup";
 import { getPublishedBooks } from "@/lib/data/books";
 
@@ -18,20 +18,9 @@ export default async function LibrosPage() {
 
   return (
     <>
-      <section className="border-b-2 border-ink bg-surface-alt py-20">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Libros"
-              index="01"
-              title="Lo que voy leyendo"
-              description="Reseñas honestas de los libros que más me han ayudado a pensar mejor sobre negocio, plata e IA."
-            />
-          </Reveal>
-        </Container>
-      </section>
+      <PageIntro eyebrow="02 / La biblioteca" title="Buenas lecturas." accent="Nuevas perspectivas." description="Libros que me hacen pensar distinto. Reseñas honestas, aprendizajes y algunas ideas para llevar a la práctica." symbol="✳" />
 
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <Container>
           {books.length > 0 ? (
             <RevealGroup className="grid gap-6 lg:grid-cols-2">
@@ -42,9 +31,7 @@ export default async function LibrosPage() {
               ))}
             </RevealGroup>
           ) : (
-            <p className="text-center text-muted">
-              Todavía no hay reseñas publicadas. Vuelve pronto.
-            </p>
+            <EmptyState title="La biblioteca está tomando forma." description="Pronto encontrarás aquí mis lecturas y reseñas. Mientras tanto, descubre recursos para seguir aprendiendo." />
           )}
         </Container>
       </section>

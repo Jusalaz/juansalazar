@@ -13,20 +13,20 @@ export default function BlogCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border-2 border-ink/10 bg-surface transition-all duration-300 hover:-translate-y-2 hover:border-ink"
+      className="content-card group flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-ink/30"
     >
       {post.cover_image_url ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={post.cover_image_url}
           alt=""
-          className="aspect-[16/10] w-full object-cover"
+          loading="lazy" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
       ) : (
-        <div className="aspect-[16/10] w-full bg-gradient-to-br from-ink via-accent to-coral" />
+        <div className={`editorial-cover cover-${post.category}`} aria-hidden="true"><span className="eyebrow relative z-10">{categoryLabel(post.category)}</span><span className="cover-symbol">{post.category === "ia" ? "✳" : post.category === "finanzas" ? "+" : "↗"}</span><span className="relative z-10 font-mono text-[10px] uppercase tracking-widest">Un punto de vista / JS.</span></div>
       )}
       <div className="flex flex-1 flex-col p-7">
-        <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em]">
+        <div className="flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.1em]">
           <span className={`rounded px-2 py-1 ${categoryBadgeClass[post.category]}`}>
             {categoryLabel(post.category)}
           </span>

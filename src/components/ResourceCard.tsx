@@ -2,7 +2,7 @@ import { Resource } from "@/lib/data/resources";
 
 const typeLabels: Record<Resource["type"], string> = {
   excel: "Plantilla Excel",
-  html: "Documento",
+  html: "Plantilla interactiva",
   curso: "Curso",
 };
 
@@ -10,7 +10,8 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
   const isInteractive = resource.type === "html";
 
   return (
-    <div className="flex flex-col rounded-2xl border-2 border-ink/10 bg-surface p-7 transition-all duration-300 hover:-translate-y-2 hover:border-ink">
+    <div className="content-card flex flex-col rounded-2xl border border-ink/10 bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ink/30">
+      <span aria-hidden="true" className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-lime font-display text-2xl">{isInteractive ? "↗" : "↓"}</span>
       <p className="font-mono text-xs uppercase tracking-[0.1em] text-coral-dark">
         {typeLabels[resource.type]}
       </p>

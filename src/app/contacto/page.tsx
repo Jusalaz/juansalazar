@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
-import SectionHeading from "@/components/SectionHeading";
+import PageIntro from "@/components/PageIntro";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { socialLinks } from "@/lib/social";
@@ -12,22 +12,21 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <section className="py-20">
+    <>
+      <PageIntro eyebrow="04 / Hablemos" title="Las buenas ideas" accent="se conversan." description="Una colaboración, una charla o algo que quieras construir. Este es un buen lugar para empezar." />
+    <section className="py-14 sm:py-20">
       <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <SectionHeading
-            eyebrow="Contacto"
-            index="01"
-            title="Escríbeme"
-            description="¿Quieres agendar una charla, invitarme a un espacio o proponer una colaboración? Escríbeme y coordinamos."
-          />
+          <p className="eyebrow text-coral-dark">Conectemos</p>
+          <h2 className="mt-4 font-display text-4xl tracking-tight">Del otro lado<br />también hay una persona.</h2>
+          <p className="mt-5 max-w-sm text-base leading-relaxed text-muted">Cuéntame tu idea con tus palabras. Puedes preparar un correo aquí o encontrarme en mis redes.</p>
 
           <div className="mt-10 space-y-6">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.1em] text-coral-dark">
                 Correo
               </p>
-              <p className="mt-1 text-base text-ink">contacto@juansalazar.com</p>
+              <a href="mailto:contacto@juansalazar.com" className="mt-2 inline-block text-base text-ink underline decoration-coral underline-offset-4">contacto@juansalazar.com ↗</a>
             </div>
             {socialLinks.map((social) => (
               <div key={social.name}>
@@ -52,5 +51,6 @@ export default function ContactoPage() {
         </Reveal>
       </Container>
     </section>
+    </>
   );
 }
