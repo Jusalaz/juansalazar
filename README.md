@@ -37,8 +37,8 @@ Pensado para desplegarse en [Vercel](https://vercel.com/new).
 
 - El presupuesto vive en `public/herramientas/presupuesto.html`. Funciona también como archivo independiente; guarda cambios en el almacenamiento local del navegador y exporta una copia HTML con los valores actuales. Cambiar el mes cambia la etiqueta del presupuesto actual: para conservar varios meses se descarga una copia de cada uno.
 - `node --test tests/budget.test.mjs` verifica saldos, repartos proporcionales, casos sin ingresos y validación de datos recuperados.
-- La primera entrega de Afectus está en `src/content/afectus.ts` y `src/components/AfectusStory.tsx`, con capturas en `public/blog/afectus/`. Es contenido editorial del proyecto, incluido en el blog junto al contenido de Supabase; no es un registro del panel de administración. Su slug queda reservado para esta pieza local.
-- Fuente de Afectus: documento proporcionado por el autor, con capturas archivadas en mayo de 2023. Los ejemplos añadidos son ilustrativos. El origen, la cronología entre productos y la segunda parte sobre el fracaso quedan pendientes del relato del autor.
+- La historia de Afectus está en `src/content/afectus.ts` y `src/components/AfectusStory.tsx`, con capturas en `public/blog/afectus/`. Es contenido editorial del proyecto, incluido en el blog junto al contenido de Supabase; no es un registro del panel de administración. Su slug queda reservado para esta pieza local.
+- Fuentes de Afectus: relato directo de Juan sobre San Francisco, análisis político, generación de texto, flujos de WhatsApp y adquisición del producto de firma digital por voz; documento del autor con capturas archivadas en mayo de 2023. Se conserva la secuencia sin inventar fechas, nombres de clientes ni términos de la adquisición. Los ejemplos de definición del problema son ilustrativos.
 - Contacto prepara un correo con `mailto:`. El visitante revisa y envía el mensaje desde su aplicación de correo; el formulario no simula una entrega por servidor.
 
 ### Kuddos: primer emprendimiento
