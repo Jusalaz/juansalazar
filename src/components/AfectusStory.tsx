@@ -29,8 +29,8 @@ export default function AfectusStory() {
         <span className="rounded-full bg-lime/40 px-4 py-2 font-mono text-[10px] uppercase tracking-wider">Historia de un emprendimiento</span>
         <span className="rounded-full border border-ink/15 px-4 py-2 font-mono text-[10px] uppercase tracking-wider">Afectus / Encontrar el problema</span>
       </div>
-      <p className="story-lead">Venía de vivir en San Francisco, California, con una idea que me entusiasmaba: analizar palabras para entender emociones. De ahí nació Afectus. Lo que todavía no teníamos bien definido era qué problema íbamos a resolver y para quién.</p>
-      <p>En ese momento, el análisis de texto era un furor. Las herramientas y los lenguajes que estábamos explorando permitían convertir conversaciones en señales que podíamos analizar. Nos metimos de lleno y construimos una app que analizaba palabras y medía emociones.</p>
+      <p className="story-lead">Venía de vivir en San Francisco, CA, con una idea que me parecia del carajo: analizar palabras para entender emociones y poder predecirlas. De ahí nació Afectus. Lo que todavía no teníamos bien definido era qué problema íbamos a resolver y para quién.</p>
+      <p>En ese momento, el análisis de texto era una novedad. Las herramientas y los lenguajes que estábamos explorando permitían convertir conversaciones en señales que podíamos analizar. Nos metimos de lleno y construimos una app que analizaba palabras y medía emociones.</p>
       <p>Después vinieron varios cambios de rumbo: política, contenido para redes sociales, flujos por WhatsApp y, finalmente, un producto de firma digital por voz que una empresa decidió adquirir. En ese recorrido aprendimos cuánto importa empezar por un problema bien definido.</p>
 
       <nav aria-label="En este artículo" className="my-10 rounded-2xl border border-ink/10 bg-surface p-6">
@@ -46,7 +46,7 @@ export default function AfectusStory() {
 
       <section id="politica" className="scroll-mt-28">
         <h2>La primera parada fue la política.</h2>
-        <p>Trabajamos con varios políticos en Colombia. Analizábamos los debates y cruzábamos ese análisis con lo que se decía en Twitter, como se llamaba en ese entonces. Queríamos entender las palabras y las emociones que aparecían alrededor de esas conversaciones.</p>
+        <p>Trabajamos con varios políticos en Colombia (uno nos termino tumbado, peroooo esa es otra historia). Analizábamos los debates y cruzábamos ese análisis con lo que se decía en Twitter (X hoy en día). Queríamos entender las palabras y las emociones que aparecían alrededor de esas conversaciones.</p>
         <ArchiveImage src="/blog/afectus/busqueda.png" alt="Pantalla original de Afectus con selección de idioma, palabra y fechas para buscar en Twitter" caption="Archivo de Afectus: la búsqueda permitía delimitar la conversación que queríamos analizar." width={1509} height={768} />
         <p>El problema apareció en el mercado: era supremamente cíclico. La escalabilidad que encontrábamos ahí era casi nula. Ya habíamos construido una herramienta y trabajado con clientes, pero ese camino tenía un límite para el negocio que queríamos crear.</p>
         <ArchiveImage src="/blog/afectus/nube-de-palabras.png" alt="Nube de palabras de Afectus con términos positivos, negativos y neutrales" caption="Archivo de Afectus: una de las visualizaciones del análisis de palabras." width={1164} height={636} />
