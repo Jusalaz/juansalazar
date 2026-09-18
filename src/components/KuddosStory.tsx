@@ -42,8 +42,8 @@ export default function KuddosStory() {
       </section>
 
       <section>
-        <h2>Los tutores y el café de Lerner.</h2>
-        <p>Mientras tanto, hacíamos entrevistas en el café de Lerner de la 93. Ahí conocíamos a quienes iban a ser nuestros tutores. Entrevistamos como a 10 para empezar a conectar estudiantes con tutores.</p>
+        <h2>Los tutores y el Café de la Lerner.</h2>
+        <p>Mientras tanto, hacíamos entrevistas en el Café de la Lerner de la 93. Ahí conocíamos a quienes iban a ser nuestros tutores. Entrevistamos como a 10 para empezar a conectar estudiantes con tutores.</p>
         <p>Y aquí hay una primera pista de dónde la cagamos: para empezar a hacer esas conexiones no necesitábamos algo tan complejo. La app todavía tenía que encajar mejor con lo que la gente necesitaba, y nosotros ya estábamos metidos en construirla.</p>
       </section>
 
