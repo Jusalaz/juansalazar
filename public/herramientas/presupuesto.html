@@ -143,11 +143,23 @@ $('btn-download').addEventListener('click',()=>{
   const copy=document.documentElement.cloneNode(true);
   copy.querySelector('#budget-data').textContent=JSON.stringify(state).replace(/</g,'\\u003c');
   copy.querySelector('#toast').textContent='';
+  copy.querySelectorAll('script[data-site-metrics]').forEach(script=>script.remove());
   const blob=new Blob(['<!DOCTYPE html>\n'+copy.outerHTML],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='presupuesto-'+state.month+'.html';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Copia preparada. Ábrela en tu navegador para seguir editando.');
 });
 renderSections();update();
 $('save-status').textContent=storageAvailable?(state.sample?'Prueba el ejemplo · Los cambios se guardan en este navegador':'Presupuesto recuperado · Guardado en este navegador'):'Guardado local no disponible. Usa «Guardar copia» para conservar los cambios.';
 })();
+</script>
+<script>
+// Only the hosted tool reports activity. Downloaded/offline copies do not load analytics.
+if (location.protocol === 'https:' && ['www.juansalazar.io', 'juansalazar.io'].includes(location.hostname)) {
+  const metrics = document.createElement('script');
+  metrics.src = '/site-metrics.js'; metrics.defer = true; metrics.dataset.siteMetrics = 'true';
+  document.head.appendChild(metrics);
+  const analytics = document.createElement('script');
+  analytics.src = '/_vercel/insights/script.js'; analytics.defer = true; analytics.dataset.siteMetrics = 'true';
+  document.head.appendChild(analytics);
+}
 </script>
 </body>
 </html>

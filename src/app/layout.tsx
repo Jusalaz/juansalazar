@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, Space_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main id="contenido" className="flex-1">{children}</main>
         <Footer />
+        <SiteAnalytics />
       </body>
     </html>
   );

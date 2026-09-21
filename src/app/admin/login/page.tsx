@@ -28,7 +28,8 @@ export default function AdminLoginPage() {
       return;
     }
 
-    router.push("/admin");
+    const next = new URLSearchParams(window.location.search).get("next");
+    router.push(next === "/adminsalazar" ? next : "/admin");
     router.refresh();
   }
 
@@ -36,7 +37,7 @@ export default function AdminLoginPage() {
     <div className="flex min-h-[80vh] items-center justify-center px-6">
       <div className="w-full max-w-sm">
         <h1 className="font-display text-2xl text-ink">Panel de administración</h1>
-        <p className="mt-2 text-sm text-muted">Inicia sesión para gestionar el contenido.</p>
+        <p className="mt-2 text-sm text-muted">Inicia sesión con tu cuenta de administrador.</p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>

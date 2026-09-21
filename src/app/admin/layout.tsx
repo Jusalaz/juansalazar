@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import { ReactNode } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { signOut } from "@/app/admin/actions";
 
+export const metadata: Metadata = { robots: { index: false, follow: false } };
+
 const links = [
+  { href: "/adminsalazar", label: "Métricas" },
   { href: "/admin", label: "Dashboard" },
   { href: "/admin/posts", label: "Posts" },
   { href: "/admin/libros", label: "Libros" },

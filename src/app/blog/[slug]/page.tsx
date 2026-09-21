@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: Props) {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-20" data-blog-content>
         <Container className="max-w-3xl">
           <Reveal>
             {post.cover_image_url && !Story ? (
